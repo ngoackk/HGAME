@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Hgame",
+  "short_name": "Hgame",
+  "version": "Hgame.com.vn",
+  "description": "Một ứng dụng Game dành cho bé chuẩn bị vào lớp 1 học phát âm các chữ cái chuẩn.",
+  "author": "VinhPQ",
+  "icons": [],
+  "start_url": "index.html"
+}
