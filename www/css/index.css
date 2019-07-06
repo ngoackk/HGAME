@@ -47,9 +47,10 @@ body {
     /* 170px x 200px */
     position: absolute;
     /* position in the center of the screen */
-    left: 00%;
-    top: 0%;
-    height: 200px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    height: 100vh;
     /* text area height */
     width: 100%;
     /* text area width */

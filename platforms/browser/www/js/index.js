@@ -39,13 +39,13 @@ var objAudio = document.getElementById("audio");
 
 
 
-function removeElement(elementId) {
-    // Removes an element from the document
-    var element = document.getElementById(elementId);
-    element.parentNode.removeChild(element);
-}
+// function removeElement(elementId) {
+//     // Removes an element from the document
+//     var element = document.getElementById(elementId);
+//     element.parentNode.removeChild(element);
+// }
 
-
+//================ Phát âm==============================//
 function read_letter(sname) {
 
     var playfile = document.getElementById(sname);
@@ -62,6 +62,8 @@ function read_letter(sname) {
 
 }
 
+
+//================Dừng đọc=============================//
 function stop_letter(sname) {
 
     var playfile = document.getElementById(sname);
@@ -70,6 +72,7 @@ function stop_letter(sname) {
 
 }
 
+//=================Đảo trạng thái====================//
 function btn_switch(sID, k) {
 
 
@@ -77,7 +80,7 @@ function btn_switch(sID, k) {
     objTmp.disabled = k;
 
 }
-
+//========================Kết thúc======================//
 function btn_end() {
 
     objBoard.innerHTML = "";
@@ -86,14 +89,25 @@ function btn_end() {
 
 }
 
-function LoadWord(kupcase) {
+//=====================Nạp tệp tin Audio====================//
+function load_audio() {
 
+    objAudio.innerHTML = "";
     for (j = 0; j < tbl_audio.length; j++) {
 
         objAudio.innerHTML += "<audio id= " + tbl_audio[j].toString() + " src = 'img/audio/" + tbl_audio[j].toString() + "' />";
 
     }
 
+}
+
+
+//========================Nạp bảng chữ cái===================//
+function LoadWord(kupcase) {
+
+
+
+    objBoard.innerHTML = "";
     if (kupcase == true) {
         for (i = 0; i < tbl_letters.length; i++) {
             objBoard.innerHTML += "<button class='btn btn-success hgame_letter' id= L" + i.toString() + " onclick=read_letter('" + tbl_audio[i].toString() + "')>" + tbl_letters[i].toString() + "</button>";
@@ -106,7 +120,8 @@ function LoadWord(kupcase) {
         }
     }
 
-    btn_switch("btnStart", true);
+    // btn_switch("btnStart", true);
+    // btn_switch("btnEnd", false);
 
 }
 

@@ -37,7 +37,7 @@ body {
     padding: 0px;
     /* Padding to avoid the "unsafe" areas behind notches in the screen */
     padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-right, 0px);
-    text-transform: uppercase;
+
     width: 100%;
 }
 
@@ -47,9 +47,10 @@ body {
     /* 170px x 200px */
     position: absolute;
     /* position in the center of the screen */
-    left: 00%;
-    top: 0%;
-    height: 200px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    height: 100vh;
     /* text area height */
     width: 100%;
     /* text area width */

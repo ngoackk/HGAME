@@ -46,14 +46,17 @@ var objAudio = document.getElementById("audio");
 // }
 
 //================ Phát âm==============================//
-function read_letter(sname) {
+function read_letter(sname, letter) {
 
     var playfile = document.getElementById(sname);
+    var objBigLetter = document.getElementById("bigLetter");
 
 
     try {
 
+        objBigLetter.innerHTML = letter;
         playfile.play();
+
     } catch (ex) {
 
         alert("Lỗi Play file Autio: " + ex.toString());
@@ -110,12 +113,14 @@ function LoadWord(kupcase) {
     objBoard.innerHTML = "";
     if (kupcase == true) {
         for (i = 0; i < tbl_letters.length; i++) {
-            objBoard.innerHTML += "<button class='btn btn-success hgame_letter' id= L" + i.toString() + " onclick=read_letter('" + tbl_audio[i].toString() + "')>" + tbl_letters[i].toString() + "</button>";
+
+            objBoard.innerHTML += "<button class='btn btn-success hgame_letter' id= L" + i.toString() + " onclick=read_letter('" + tbl_audio[i].toString() + "','" + tbl_letters[i].toString() + "')>" + tbl_letters[i].toString() + "</button>";
 
         }
     } else {
         for (i = 0; i < tbl_letters.length; i++) {
-            objBoard.innerHTML += "<button class='btn btn-success hgame_letter' id= L" + i.toString() + " onclick=read_letter('" + tbl_audio[i].toString() + "')>" + tbl_letters[i].toLowerCase() + "</button>";
+            objBoard.innerHTML += "<button class='btn btn-success hgame_letter' id= L" + i.toString() + " onclick=read_letter('" + tbl_audio[i].toString() + "','" + tbl_letters[i].toLowerCase() + "')>" + tbl_letters[i].toLowerCase() + "</button>";
+
 
         }
     }
