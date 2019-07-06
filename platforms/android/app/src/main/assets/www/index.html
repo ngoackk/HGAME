@@ -3,7 +3,7 @@
 <html>
 
 <head>
-
+    <meta charset="utf-8">
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'
             data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self'
             'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
@@ -17,7 +17,7 @@
     <title>Hấu Game</title>
 </head>
 
-<body>
+<body onload="load_audio();">
     <div id="audio">
 
 
@@ -65,10 +65,9 @@
                 <div class="col-lg-6">
 
                     <button id="btnStart" class="btn btn-success vbtn2" onclick="LoadWord(false);"><span
-                            class="btn-batdau">Bắt
-                            đầu</span> </button>
-                    <button id="btnEnd" onclick="btn_end();" class="btn btn-danger vbtn5 "><span class="btn-ketthuc">Kết
-                            thúc</span> </button>
+                            class="btn-batdau">Chữ thường</span> </button>
+                    <button id="btnEnd" onclick="LoadWord(true);" class="btn btn- vbtn5 "><span class="btn-ketthuc">Chữ
+                            hoa</span> </button>
                 </div>
 
 
