@@ -86,7 +86,7 @@ function btn_end() {
 
 }
 
-function LoadWord() {
+function LoadWord(kupcase) {
 
     for (j = 0; j < tbl_audio.length; j++) {
 
@@ -94,11 +94,17 @@ function LoadWord() {
 
     }
 
-    for (i = 0; i < tbl_letters.length; i++) {
-        objBoard.innerHTML += "<button class='btn btn-success hgame_letter' id= L" + i.toString() + " onclick=read_letter('" + tbl_audio[i].toString() + "')>" + tbl_letters[i].toString() + "</button>";
+    if (kupcase == true) {
+        for (i = 0; i < tbl_letters.length; i++) {
+            objBoard.innerHTML += "<button class='btn btn-success hgame_letter' id= L" + i.toString() + " onclick=read_letter('" + tbl_audio[i].toString() + "')>" + tbl_letters[i].toString() + "</button>";
 
+        }
+    } else {
+        for (i = 0; i < tbl_letters.length; i++) {
+            objBoard.innerHTML += "<button class='btn btn-success hgame_letter' id= L" + i.toString() + " onclick=read_letter('" + tbl_audio[i].toString() + "')>" + tbl_letters[i].toLowerCase() + "</button>";
+
+        }
     }
-
 
     btn_switch("btnStart", true);
 
