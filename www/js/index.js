@@ -36,6 +36,7 @@ var tbl_audio = Array("a.mp3", "aw.mp3", "aa.mp3", "b.mp3", "c.mp3", "d.mp3", "d
 
 var objBoard = document.getElementById("animate");
 var objAudio = document.getElementById("audio");
+var objBigLetter = document.getElementById("bigLetter");
 
 
 
@@ -49,7 +50,6 @@ var objAudio = document.getElementById("audio");
 function read_letter(sname, letter) {
 
     var playfile = document.getElementById(sname);
-    var objBigLetter = document.getElementById("bigLetter");
 
 
     try {
@@ -88,6 +88,7 @@ function btn_end() {
 
     objBoard.innerHTML = "";
     objAudio.innerHTML = "";
+    objBigLetter.innerHTML = "";
     btn_switch("btnStart", false);
 
 }
@@ -111,6 +112,7 @@ function LoadWord(kupcase) {
 
 
     objBoard.innerHTML = "";
+    objBigLetter.innerHTML = "";
     if (kupcase == true) {
         for (i = 0; i < tbl_letters.length; i++) {
 
