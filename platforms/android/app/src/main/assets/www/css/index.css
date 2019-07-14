@@ -28,7 +28,8 @@ body {
     /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;
     /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color: #E4E4E4;
+    background-color: rgb(228, 228, 228);
+
     background-image: linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
     font-family: system-ui, -apple-system, -apple-system-font, Arial;
     font-size: 12px;
@@ -60,6 +61,8 @@ body {
     margin: 0px 0px 0px 0px;
     /* offset vertical: half of image height and text area height */
     /* offset horizontal: half of text area width */
+
+
 }
 
 /* Landscape layout (with min-width) */
