@@ -4,7 +4,7 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
-    <name>Hgame</name>
+    <name>Hấu's Game</name>
     <description>
        Một ứng dụng Game dành cho bé chuẩn bị vào lớp 1 học phát âm các chữ cái chuẩn.
     </description>

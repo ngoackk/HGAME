@@ -28,7 +28,7 @@ var app = {
 };
 
 //Phần Code Game của Hấu
-var tbl_test = Array("behaychonchu.mp3", "sairoisuynghi.mp3", "haychirachu.mp3", "totlam.mp3")
+var tbl_test = Array("behaychonchu.mp3", "sairoisuynghi.mp3", "haychirachu.mp3", "totlam.mp3");
 
 var tbl_letters = Array(
   "A",
@@ -96,13 +96,14 @@ var tbl_audio = Array(
 var objBoard = document.getElementById("letters");
 var objMark = document.getElementById("marks");
 var objAudio = document.getElementById("audio");
+
 var objBigLetter = document.getElementById("bigLetter");
 
 
 var kupper = false;
 var returnLetter;
 var returnRandom;
-
+var testCheck = false;
 // function removeElement(elementId) {
 //     // Removes an element from the document
 //     var element = document.getElementById(elementId);
@@ -112,10 +113,30 @@ var returnRandom;
 //================ Phát âm==============================//
 function read_letter(sname, letter) {
   var playfile = document.getElementById(sname);
+  var objWrong = document.getElementById("sairoisuynghi.mp3");
+  var objCorect = document.getElementById("totlam.mp3");
 
   try {
     objBigLetter.innerHTML = letter;
-    playfile.play();
+
+
+    if (testCheck) {
+      setTimeout(function () {
+        playfile.play();
+      }, 1000);
+      if (tbl_letters[returnRandom] != letter.toUpperCase()) {
+
+        objWrong.play();
+      } else {
+
+        objCorect.play();
+      }
+      testCheck = false;
+
+    } else {
+
+      playfile.play();
+    }
   } catch (ex) {
     alert("Lỗi Play file Autio: " + ex.toString());
   }
@@ -197,11 +218,11 @@ function LoadWord(kupcase) {
     }
   }
 
-  // btn_switch("btnStart", true);
-  // btn_switch("btnEnd", false);
+
 }
 
 function Test() {
+  testCheck = true;
   var chkSuggest = document.getElementById("chkSuggest");
   var starttest = document.getElementById('behaychonchu.mp3');
 
@@ -226,7 +247,7 @@ function Test() {
     starttest.play();
 
     setTimeout(function () {
-      playfile.play()
+      playfile.play();
     }, 1500);
     setTimeout(function () {
       if (chkSuggest.checked) {
@@ -240,7 +261,8 @@ function Test() {
 
 
       }
-    }, 1500)
+    }, 1500);
+
 
 
 

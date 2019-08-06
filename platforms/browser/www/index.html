@@ -25,42 +25,37 @@
 
     <div class="app">
 
-        <div class="vheader">
-            <!-- Avarta -->
+        <div class="container">
 
-            <!-- <div class="avatar">
+            <div class="row">
 
-                <img src="img/dh200.png" class="img-circle" width="20%" />
+                <div class="col-lg-12 navbar-fixed-top vheader">
 
-
-            </div> -->
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <div id="myCarousel" class="carousel slide  " data-ride="carousel">
 
 
 
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <img src="img/banner1000_1.png" alt="Hấu's Game">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="img/banner1000_1.png" alt="Hấu's Game">
+                            </div>
+                            <div class="item ">
+                                <img src="img/banner10002_1.png" alt="Hấu's Game">
+                            </div>
+
+
+                        </div>
+
+
+
                     </div>
-                    <div class="item ">
-                        <img src="img/banner10002_1.png" alt="Hấu's Game">
-                    </div>
-
-
-
-
                 </div>
-
-
-
             </div>
 
         </div>
         <!--Kết thúc của VHEADER-->
-        <div>
-            <hr width="100%" />
-        </div>
+
 
 
         <div class="container">
@@ -71,7 +66,18 @@
                     <span id="bigLetter" class="bigletter"></span>
                 </div>
             </div>
+            <div class="row">
 
+                <div class="col-lg-6">
+                    <button id="btnKiemTra" class="btn vbtn_round" onclick="Test();">
+                        <span class="btn-batdau">Kiểm tra</span>
+                    </button>
+                </div>
+                <div class="col-lg-6">
+                    <label><span class="htext">Gợi ý</span></label> <input type="checkbox" id="chkSuggest" />
+
+                </div>
+            </div>
             <div class="row ">
 
 
@@ -85,26 +91,37 @@
 
             </div>
 
+
             <div class="row">
-                <div class="col-lg-12" id="animate">
+                <!-- <div class="col-lg-12" id="marks">
+
+                </div> -->
+                <div class="row">
 
 
+                    <div class="col-lg-12" id="letters">
+
+
+
+
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-12 footer_copyright">
+                        Copyright @2019 By vinhpq99@gmail.com
+                    </div>
 
 
                 </div>
             </div>
 
-
-            <div class="row">
-                <div class="col-lg-12 footer_copyright">
-                    Copyright @2019 By vinhpq99@gmail.com
-                </div>
-
-
-            </div>
         </div>
-
     </div>
+
+
+
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/jquery-3.3.1.slim.js"></script>
